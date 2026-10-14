@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "datasets": [
+    {
+      "id": "alice-in-wonderland",
+      "title": "Alice’s Adventures in Wonderland",
+      "description": "Lewis Carroll’s English novel; small prose dataset. Original text and embedded Project Gutenberg notices are retained.",
+      "license": "Public domain in the USA; Project Gutenberg terms apply",
+      "source_url": "https://www.gutenberg.org/ebooks/11",
+      "url": "https://raw.githubusercontent.com/GITenberg/Alice-s-Adventures-in-Wonderland_11/7f18748e114b994d5d9454d5793581bc0b9cf9d7/11-0.txt",
+      "sha256": "49a0b2726606e1290ac03a63978fa1dd1bd38a8d805704d98265f393533ea094",
+      "size_bytes": 173595,
+      "encoding": "utf-8",
+      "compression": "none",
+      "uncompressed_size_bytes": 173595,
+      "license_url": "https://github.com/GITenberg/Alice-s-Adventures-in-Wonderland_11/blob/7f18748e114b994d5d9454d5793581bc0b9cf9d7/LICENSE",
+      "repository_url": "https://github.com/GITenberg/Alice-s-Adventures-in-Wonderland_11",
+      "revision": "7f18748e114b994d5d9454d5793581bc0b9cf9d7",
+      "language": "en",
+      "license_notice": "This eBook is for the use of anyone anywhere at no cost and with almost no restrictions whatsoever. You may copy it, give it away or re-use it under the terms of the Project Gutenberg License included with this eBook or online at www.gutenberg.org"
+    },
+    {
+      "id": "tiny-shakespeare",
+      "title": "Tiny Shakespeare",
+      "description": "A roughly 1.1 MB selection of Shakespeare dialogue from Andrej Karpathy’s character-language-model example.",
+      "license": "MIT (repository declaration); Shakespeare source works are public domain",
+      "source_url": "https://github.com/karpathy/char-rnn/tree/6f9487a6fe5b420b7ca9afb0d7c078e37c1d1b4e/data/tinyshakespeare",
+      "url": "https://raw.githubusercontent.com/karpathy/char-rnn/6f9487a6fe5b420b7ca9afb0d7c078e37c1d1b4e/data/tinyshakespeare/input.txt",
+      "sha256": "86c4e6aa9db7c042ec79f339dcb96d42b0075e16b8fc2e86bf0ca57e2dc565ed",
+      "size_bytes": 1115394,
+      "encoding": "utf-8",
+      "compression": "none",
+      "uncompressed_size_bytes": 1115394,
+      "license_url": "https://github.com/karpathy/char-rnn/blob/6f9487a6fe5b420b7ca9afb0d7c078e37c1d1b4e/Readme.md#license",
+      "repository_url": "https://github.com/karpathy/char-rnn",
+      "revision": "6f9487a6fe5b420b7ca9afb0d7c078e37c1d1b4e",
+      "language": "en"
+    }
+  ]
+}
