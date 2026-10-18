@@ -2,6 +2,10 @@
 
 Public metadata for the Brain Android training catalog. This repository contains dataset names, descriptions, external source URLs, licensing provenance, pinned download URLs and integrity metadata only. It contains no Brain application source, corpus copies, trained graphs, credentials or user data.
 
+## Music discovery quest line
+
+See [Music foundations: adaptive discovery](quests/music-foundations.md) and its [machine-readable plan](quests/music-foundations.json). These reference an existing Kodály Center curriculum and distinguish its documented milestones from the proposed Brain experiments. Music materials and runtime support are explicitly marked as planned; this metadata does not make the quests executable.
+
 ## Catalog contract
 
 `catalog.json` uses `version: 1` and a `datasets` array. Required fields are `id`, `title`, `description`, `license`, `source_url`, `url`, `sha256`, `size_bytes`, `encoding` and `compression`. `sha256` and `size_bytes` describe the exact downloaded bytes before any decoding or decompression. `uncompressed_size_bytes` describes decoded-container bytes and is required for compressed files. This initial catalog contains uncompressed UTF-8 files only. Additional provenance fields include `license_url`, `repository_url`, `revision`, `language` and an optional `license_notice`.

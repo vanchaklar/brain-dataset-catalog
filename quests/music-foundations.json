@@ -1,0 +1,461 @@
+{
+  "schema_version": 1,
+  "id": "brain-music-discovery",
+  "title": "Music foundations: adaptive discovery",
+  "status": "reference_and_plan_only",
+  "executable": false,
+  "verified_at": "2026-10-18",
+  "sources": [
+    {
+      "id": "kodaly-grade1",
+      "title": "Holy Names / Kodály Center Grade 1 curriculum (Laskey 2014)",
+      "url": "https://www.kodalycollection.org/pdf/grade1_curriculum.pdf",
+      "overview_url": "https://www.kodalycollection.org/curriculum_grade1.cfm",
+      "lesson_count": 70,
+      "prerequisite": "Prior kindergarten musical experiences; designed for teachers with Kodaly teacher education.",
+      "rights": "Reference only; no permission to redistribute source materials is asserted."
+    }
+  ],
+  "progress_policy": {
+    "required_accuracy": null,
+    "required_improvement": false,
+    "prescribed_parameter_direction": null,
+    "principle": "Progress creates evidence or measurement ability needed for the next question.",
+    "completed_outcomes": [
+      "positive",
+      "negative",
+      "inconclusive"
+    ],
+    "invalid_run": "Retain observations but do not count as a valid comparison.",
+    "source_order": "Suggested musical order, not a mandatory score-gated experiment ladder."
+  },
+  "runtime_gaps": [
+    "musical event duration and rest representation",
+    "sonification",
+    "observed-input learning-disabled evaluation",
+    "independent same-start A/B branches",
+    "quest manifest loader and quest UI"
+  ],
+  "source_milestones": [
+    {
+      "id": "beat",
+      "lessons": [
+        1,
+        1
+      ],
+      "documented_anchor": "Beat through tapping, clapping and walking.",
+      "source_id": "kodaly-grade1",
+      "pdf_page": 1
+    },
+    {
+      "id": "steady-beat",
+      "lessons": [
+        2,
+        2
+      ],
+      "documented_anchor": "Steady beat contrasted with freer chant.",
+      "source_id": "kodaly-grade1",
+      "pdf_page": 1
+    },
+    {
+      "id": "tempo",
+      "lessons": [
+        3,
+        3
+      ],
+      "documented_anchor": "Beat with tempo changes.",
+      "source_id": "kodaly-grade1",
+      "pdf_page": 1
+    },
+    {
+      "id": "beat-rhythm",
+      "lessons": [
+        4,
+        11
+      ],
+      "documented_anchor": "Rhythm introduced at lesson 4; beat and rhythm explored together.",
+      "source_id": "kodaly-grade1",
+      "pdf_page": 1
+    },
+    {
+      "id": "rhythm-names",
+      "lessons": [
+        12,
+        21
+      ],
+      "documented_anchor": "Ta/ti-ti named at lesson 12; subsequent rhythmic practice.",
+      "source_id": "kodaly-grade1",
+      "pdf_page": 1
+    },
+    {
+      "id": "high-low",
+      "lessons": [
+        22,
+        26
+      ],
+      "documented_anchor": "High/low melody work precedes named pitches.",
+      "source_id": "kodaly-grade1",
+      "pdf_page": 2
+    },
+    {
+      "id": "so-mi",
+      "lessons": [
+        27,
+        36
+      ],
+      "documented_anchor": "So-mi named at lesson 27.",
+      "source_id": "kodaly-grade1",
+      "pdf_page": 3
+    },
+    {
+      "id": "la",
+      "lessons": [
+        37,
+        46
+      ],
+      "documented_anchor": "La named at lesson 37.",
+      "source_id": "kodaly-grade1",
+      "pdf_page": 3
+    },
+    {
+      "id": "rest",
+      "lessons": [
+        47,
+        55
+      ],
+      "documented_anchor": "Rest presented at lesson 47.",
+      "source_id": "kodaly-grade1",
+      "pdf_page": 4
+    },
+    {
+      "id": "do",
+      "lessons": [
+        56,
+        67
+      ],
+      "documented_anchor": "Do named at lesson 56.",
+      "source_id": "kodaly-grade1",
+      "pdf_page": 5
+    },
+    {
+      "id": "re",
+      "lessons": [
+        68,
+        70
+      ],
+      "documented_anchor": "Re named at lesson 68; staff placement at lesson 70.",
+      "source_id": "kodaly-grade1",
+      "pdf_page": 7
+    }
+  ],
+  "quests": [
+    {
+      "id": "feel-the-beat",
+      "title": "Find the pulse",
+      "source_milestone_ids": [
+        "beat",
+        "steady-beat"
+      ],
+      "question": "Can I tell a regular pulse from a freely timed sequence?",
+      "brain_adaptation": "Define a beat reference and inspect a bounded event timeline.",
+      "completion_evidence": "A timeline distinguishes a beat reference from event onsets.",
+      "suggested_next": "compare-tempo",
+      "dataset_refs": [],
+      "materials_status": "not_published",
+      "runtime_status": "planned",
+      "requires": [
+        "licensed_musical_material",
+        "verified_event_representation",
+        "observation_protocol"
+      ]
+    },
+    {
+      "id": "compare-tempo",
+      "title": "Keep the pulse while speed changes",
+      "source_milestone_ids": [
+        "tempo"
+      ],
+      "question": "What changes when timing changes but event order stays fixed?",
+      "brain_adaptation": "Record both timing schedules before comparing; do not infer tempo learning from fixed-rate text.",
+      "completion_evidence": "An explicit timing contract makes a rhythm question testable.",
+      "suggested_next": "separate-beat-rhythm",
+      "dataset_refs": [],
+      "materials_status": "not_published",
+      "runtime_status": "planned",
+      "requires": [
+        "licensed_musical_material",
+        "verified_event_representation",
+        "observation_protocol"
+      ]
+    },
+    {
+      "id": "separate-beat-rhythm",
+      "title": "Separate pulse from pattern",
+      "source_milestone_ids": [
+        "beat-rhythm",
+        "rhythm-names"
+      ],
+      "question": "Which events share a beat, and can the representation preserve that?",
+      "brain_adaptation": "Inspect onset-to-beat alignment and distinguish event order from duration.",
+      "completion_evidence": "A checked rhythm representation supports short motif experiments.",
+      "suggested_next": "trace-high-low",
+      "dataset_refs": [],
+      "materials_status": "not_published",
+      "runtime_status": "planned",
+      "requires": [
+        "licensed_musical_material",
+        "verified_event_representation",
+        "observation_protocol"
+      ]
+    },
+    {
+      "id": "trace-high-low",
+      "title": "Follow pitch direction",
+      "source_milestone_ids": [
+        "high-low"
+      ],
+      "question": "Can I describe up and down without losing the rhythm?",
+      "brain_adaptation": "Choose a pitch/duration mapping and check that the event timeline preserves both.",
+      "completion_evidence": "Verified mapping makes named-pitch experiments interpretable.",
+      "suggested_next": "explore-so-mi",
+      "dataset_refs": [],
+      "materials_status": "not_published",
+      "runtime_status": "planned",
+      "requires": [
+        "licensed_musical_material",
+        "verified_event_representation",
+        "observation_protocol"
+      ]
+    },
+    {
+      "id": "explore-so-mi",
+      "title": "Explore so-mi",
+      "source_milestone_ids": [
+        "so-mi"
+      ],
+      "question": "What happens on a small two-pitch musical example?",
+      "brain_adaptation": "Once licensed material and observation support exist, capture pre-outcome predictions on a bounded range.",
+      "completion_evidence": "A valid baseline allows replay or missing-measurement questions.",
+      "suggested_next": "extend-la",
+      "dataset_refs": [],
+      "materials_status": "not_published",
+      "runtime_status": "planned",
+      "requires": [
+        "licensed_musical_material",
+        "verified_event_representation",
+        "observation_protocol"
+      ]
+    },
+    {
+      "id": "extend-la",
+      "title": "Explore la",
+      "source_milestone_ids": [
+        "la"
+      ],
+      "question": "Does a finding persist when the material adds another pitch?",
+      "brain_adaptation": "Keep the earlier question and document changes in vocabulary and material.",
+      "completion_evidence": "A scoped comparison can expose representation or context dependence.",
+      "suggested_next": "represent-rest",
+      "dataset_refs": [],
+      "materials_status": "not_published",
+      "runtime_status": "planned",
+      "requires": [
+        "licensed_musical_material",
+        "verified_event_representation",
+        "observation_protocol"
+      ]
+    },
+    {
+      "id": "represent-rest",
+      "title": "Make silence explicit",
+      "source_milestone_ids": [
+        "rest"
+      ],
+      "question": "Does a rest remain distinct from missing input?",
+      "brain_adaptation": "Validate rest semantics and timing before interpreting outcomes.",
+      "completion_evidence": "Represented silence enables phrases with rests.",
+      "suggested_next": "extend-do",
+      "dataset_refs": [],
+      "materials_status": "not_published",
+      "runtime_status": "planned",
+      "requires": [
+        "licensed_musical_material",
+        "verified_event_representation",
+        "observation_protocol"
+      ]
+    },
+    {
+      "id": "extend-do",
+      "title": "Explore do",
+      "source_milestone_ids": [
+        "do"
+      ],
+      "question": "What survives a broader pitch vocabulary?",
+      "brain_adaptation": "Retain the source and comparison protocol; record negative or inconclusive outcomes.",
+      "completion_evidence": "A documented scope boundary informs the next experiment.",
+      "suggested_next": "extend-re",
+      "dataset_refs": [],
+      "materials_status": "not_published",
+      "runtime_status": "planned",
+      "requires": [
+        "licensed_musical_material",
+        "verified_event_representation",
+        "observation_protocol"
+      ]
+    },
+    {
+      "id": "extend-re",
+      "title": "Explore re",
+      "source_milestone_ids": [
+        "re"
+      ],
+      "question": "Does the current finding transfer to this new material?",
+      "brain_adaptation": "Use reserved material only after independent starting states and frozen evaluation exist.",
+      "completion_evidence": "A qualified transfer result or a new unresolved question.",
+      "suggested_next": null,
+      "dataset_refs": [],
+      "materials_status": "not_published",
+      "runtime_status": "planned",
+      "requires": [
+        "licensed_musical_material",
+        "verified_event_representation",
+        "observation_protocol"
+      ]
+    }
+  ],
+  "discovery_branches": [
+    {
+      "id": "observe",
+      "question": "What happens on this bounded material?",
+      "requires": [
+        "source_identity",
+        "settings_identity",
+        "resource_budget"
+      ],
+      "evidence": [
+        "actual_and_prior_prediction",
+        "correct_and_eligible",
+        "coverage",
+        "cost"
+      ],
+      "next_by_observation": {
+        "missing_predictions": "inspect-measurement",
+        "valid_baseline": "replay"
+      }
+    },
+    {
+      "id": "inspect-measurement",
+      "question": "What evidence is missing?",
+      "requires": [
+        "observation_gap"
+      ],
+      "evidence": [
+        "missing_fields",
+        "proposed_measurement"
+      ],
+      "next_by_observation": {
+        "measurement_repaired": "observe",
+        "unsupported": "record-blocker"
+      }
+    },
+    {
+      "id": "replay",
+      "question": "Does another learning pass change the result?",
+      "requires": [
+        "valid_baseline"
+      ],
+      "evidence": [
+        "same_range",
+        "same_settings",
+        "continued_learning_label",
+        "before_after_counts_and_cost"
+      ],
+      "next_by_observation": {
+        "changed": "reproduce",
+        "unchanged": "inspect-activity",
+        "inconsistent": "reproduce"
+      }
+    },
+    {
+      "id": "inspect-activity",
+      "question": "Does activity settle, grow or disappear?",
+      "requires": [
+        "same_window_activity_trace"
+      ],
+      "evidence": [
+        "fixed_input_interval",
+        "bounded_windows"
+      ],
+      "next_by_observation": {
+        "specific_hypothesis": "compare-one-change",
+        "missing_trace": "inspect-measurement"
+      }
+    },
+    {
+      "id": "compare-one-change",
+      "question": "Does one change affect outcomes, cost or neither?",
+      "requires": [
+        "independent_same_start_branches",
+        "one_declared_change"
+      ],
+      "evidence": [
+        "state_fingerprints",
+        "settings",
+        "range",
+        "counts",
+        "cost",
+        "rollback"
+      ],
+      "next_by_observation": {
+        "positive": "reproduce",
+        "negative": "revise-question",
+        "inconclusive": "inspect-measurement"
+      }
+    },
+    {
+      "id": "reproduce",
+      "question": "Can we reproduce the difference?",
+      "requires": [
+        "independent_same_start_branches"
+      ],
+      "evidence": [
+        "repeated_comparison",
+        "agreement_or_contradiction"
+      ],
+      "next_by_observation": {
+        "reproduced": "transfer",
+        "contradictory": "revise-question"
+      }
+    },
+    {
+      "id": "transfer",
+      "question": "Does it survive untouched material?",
+      "requires": [
+        "reserved_material",
+        "learning_disabled_evaluation",
+        "baseline_and_candidate_snapshots"
+      ],
+      "evidence": [
+        "split_overlap_check",
+        "counts",
+        "cost",
+        "test_retirement_if_used_for_tuning"
+      ],
+      "next_by_observation": {
+        "positive": "record-scoped-finding",
+        "negative": "revise-question",
+        "inconclusive": "inspect-measurement"
+      }
+    }
+  ],
+  "existing_nonmusical_catalog": {
+    "path": "../catalog-v3.json",
+    "verified_commit": "98c5b4fd0e8d7180f16ac49e0a8db92a00aa9ff6",
+    "dataset_ids": [
+      "alice-in-wonderland",
+      "tiny-shakespeare"
+    ],
+    "role": "Optional later text experiments only; not music curriculum material.",
+    "verification": "Entry identities verified in catalog; upstream corpus bytes not downloaded again."
+  }
+}
