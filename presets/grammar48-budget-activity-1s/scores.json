@@ -1,0 +1,233 @@
+{
+  "schema": 1,
+  "experiment_date": "2026-10-29",
+  "source_build": 101,
+  "selection_candidates": [
+    1,
+    2,
+    4
+  ],
+  "confirmation_candidates_locked_before_evaluation": [
+    1,
+    4
+  ],
+  "metric_definitions": {
+    "accuracy": "correct / all input characters; abstentions and ties are not correct",
+    "letter_accuracy": "letters_correct / letters",
+    "prediction_coverage": "(inputs - no_prediction) / inputs",
+    "wrong": "incorrect predictions, excludes no_prediction",
+    "lonely_composites": "A composite with no stored relation to a distinct composite node. Either direction and either supported relation kind counts; no magnitude threshold, before display filtering/LOD. All composite-to-composite edges in these runs were event_step.",
+    "run_admission_retries": "temporary admission retries over entire train+evaluation run, not dropped inputs",
+    "top1_strongest_contributor_kind": "kind of strongest contributor to selected prediction, not proof of causality or learned semantics"
+  },
+  "presets": [
+    {
+      "id": "budget-activity-1s-increment1",
+      "configuration": "increment1.json",
+      "configuration_sha256": "f25d058fbd9a7250f8dc82f530e81792a63e4c2601f5c68486c7ba202b04c9fd",
+      "input_interval_us": 1000000,
+      "graph_after_training": {
+        "composites": 326,
+        "lonely_composites": 324,
+        "connected_composites": 2,
+        "composite_to_composite_learned_edges": 1
+      },
+      "evaluations": [
+        {
+          "split": "selection",
+          "metrics": {
+            "accuracy": 0.4119351100811124,
+            "correct": 4266,
+            "distinct_composite_candidates": 5,
+            "inputs": 10356,
+            "letter_accuracy": 0.28128797083839613,
+            "letters": 8230,
+            "letters_correct": 2315,
+            "no_prediction": 0,
+            "positive_composite_target_boundaries": 980,
+            "positive_forecasts_with_composite_candidate_boundaries": 503,
+            "positive_mismatch_forecast_boundaries": 10356,
+            "ties": 0,
+            "top1_strongest_contributor_kind": {
+              "atomic": 4479,
+              "composite": 0,
+              "mismatch": 5877,
+              "other": 0
+            },
+            "wrong": 6090,
+            "wrong_space_letters_strongest_contributor_mismatch": 1853,
+            "wrong_space_on_letters": 2433
+          },
+          "prediction_coverage": 1.0,
+          "frozen_graph_unchanged": true,
+          "run_admission_retries": 0,
+          "result_artifact_sha256": "80c7b586c983d272064ac0d9cee5df559441c2ff542b16a2f7eb1d1e0e561d7a",
+          "trained_checkpoint_sha256": "c8c4ad346325cabc13b7e0203bd807e4bd9977cf4242022fd712142b0c81e235"
+        },
+        {
+          "split": "confirmation",
+          "metrics": {
+            "accuracy": 0.4075468056359776,
+            "correct": 4223,
+            "distinct_composite_candidates": 7,
+            "inputs": 10362,
+            "letter_accuracy": 0.2735125927728434,
+            "letters": 8219,
+            "letters_correct": 2248,
+            "no_prediction": 0,
+            "positive_composite_target_boundaries": 957,
+            "positive_forecasts_with_composite_candidate_boundaries": 553,
+            "positive_mismatch_forecast_boundaries": 10362,
+            "ties": 0,
+            "top1_strongest_contributor_kind": {
+              "atomic": 4430,
+              "composite": 0,
+              "mismatch": 5932,
+              "other": 0
+            },
+            "wrong": 6139,
+            "wrong_space_letters_strongest_contributor_mismatch": 1867,
+            "wrong_space_on_letters": 2399
+          },
+          "prediction_coverage": 1.0,
+          "frozen_graph_unchanged": true,
+          "run_admission_retries": 0,
+          "result_artifact_sha256": "5918c5fa1dc282af743218e1ffc40519b6768928c0a74caf865d128d51eff8e8",
+          "trained_checkpoint_sha256": "c8c4ad346325cabc13b7e0203bd807e4bd9977cf4242022fd712142b0c81e235"
+        }
+      ]
+    },
+    {
+      "id": "budget-activity-1s-increment2",
+      "configuration": "increment2.json",
+      "configuration_sha256": "9f082cc02aa0e2f19a421469932fbd700a7cff53550a180e7c70a8c952b0e82c",
+      "input_interval_us": 1000000,
+      "graph_after_training": {
+        "composites": 561,
+        "lonely_composites": 168,
+        "connected_composites": 393,
+        "composite_to_composite_learned_edges": 829
+      },
+      "evaluations": [
+        {
+          "split": "selection",
+          "metrics": {
+            "accuracy": 0.3186558516801854,
+            "correct": 3300,
+            "distinct_composite_candidates": 70,
+            "inputs": 10356,
+            "letter_accuracy": 0.19793438639125152,
+            "letters": 8230,
+            "letters_correct": 1629,
+            "no_prediction": 0,
+            "positive_composite_target_boundaries": 10356,
+            "positive_forecasts_with_composite_candidate_boundaries": 671,
+            "positive_mismatch_forecast_boundaries": 10356,
+            "ties": 0,
+            "top1_strongest_contributor_kind": {
+              "atomic": 8427,
+              "composite": 371,
+              "mismatch": 1558,
+              "other": 0
+            },
+            "wrong": 7056,
+            "wrong_space_letters_strongest_contributor_mismatch": 242,
+            "wrong_space_on_letters": 2353
+          },
+          "prediction_coverage": 1.0,
+          "frozen_graph_unchanged": true,
+          "run_admission_retries": 0,
+          "result_artifact_sha256": "867a0db11ea99f406724fcd80a20e9dcb016ad2e4319bc29001794fc1339f2e0",
+          "trained_checkpoint_sha256": "fe633559626fec04b4828ec8111b0a7c296c0455884843e002432dfd1f00ea67"
+        }
+      ],
+      "confirmation_status": "not tested; not selected"
+    },
+    {
+      "id": "budget-activity-1s-increment4",
+      "configuration": "increment4.json",
+      "configuration_sha256": "380f5e5130a5e445e8702b357186baf29dd2e2e9c30afd2797e5b774175c504c",
+      "input_interval_us": 1000000,
+      "graph_after_training": {
+        "composites": 3319,
+        "lonely_composites": 1557,
+        "connected_composites": 1762,
+        "composite_to_composite_learned_edges": 11245
+      },
+      "evaluations": [
+        {
+          "split": "selection",
+          "metrics": {
+            "accuracy": 0.6323870220162224,
+            "correct": 6549,
+            "distinct_composite_candidates": 1067,
+            "inputs": 10356,
+            "letter_accuracy": 0.5787363304981774,
+            "letters": 8230,
+            "letters_correct": 4763,
+            "no_prediction": 132,
+            "positive_composite_target_boundaries": 10356,
+            "positive_forecasts_with_composite_candidate_boundaries": 8304,
+            "positive_mismatch_forecast_boundaries": 8625,
+            "ties": 0,
+            "top1_strongest_contributor_kind": {
+              "atomic": 2167,
+              "composite": 6575,
+              "mismatch": 1482,
+              "other": 0
+            },
+            "wrong": 3675,
+            "wrong_space_letters_strongest_contributor_mismatch": 105,
+            "wrong_space_on_letters": 618
+          },
+          "prediction_coverage": 0.9872537659327926,
+          "frozen_graph_unchanged": true,
+          "run_admission_retries": 2831,
+          "result_artifact_sha256": "b98aceb84cb6dd1d6891a88a0b8c40099f21fe6b81d66324d55d9dc7867c4b42",
+          "trained_checkpoint_sha256": "1e4861c58158e72a36fd149877d98ea58f539ed9ba66a6907e478b6719e89795"
+        },
+        {
+          "split": "confirmation",
+          "metrics": {
+            "accuracy": 0.6384867786141671,
+            "correct": 6616,
+            "distinct_composite_candidates": 1087,
+            "inputs": 10362,
+            "letter_accuracy": 0.5825526219734761,
+            "letters": 8219,
+            "letters_correct": 4788,
+            "no_prediction": 123,
+            "positive_composite_target_boundaries": 10362,
+            "positive_forecasts_with_composite_candidate_boundaries": 8204,
+            "positive_mismatch_forecast_boundaries": 8597,
+            "ties": 0,
+            "top1_strongest_contributor_kind": {
+              "atomic": 2257,
+              "composite": 6503,
+              "mismatch": 1479,
+              "other": 0
+            },
+            "wrong": 3623,
+            "wrong_space_letters_strongest_contributor_mismatch": 102,
+            "wrong_space_on_letters": 583
+          },
+          "prediction_coverage": 0.9881297046902142,
+          "frozen_graph_unchanged": true,
+          "run_admission_retries": 2831,
+          "result_artifact_sha256": "f3ff87393ff439621010f95266a2566912f9a808336f7851d016d15702e82691",
+          "trained_checkpoint_sha256": "1e4861c58158e72a36fd149877d98ea58f539ed9ba66a6907e478b6719e89795"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "native_selection_and_confirmation": "completed successfully; both confirmation processes exited 0",
+    "actual_jni_training": {
+      "candidate_increment": 4,
+      "accepted_inputs": 34392,
+      "temporary_admission_retries": 2830,
+      "graph_comparison": "Exact concepts and relations equal to deterministic runner; 3319 composites, 1557 Lonely, 1762 connected, 11245 composite-to-composite edges",
+      "note": "JNI retries differ by one from runner count 2831; do not conflate the two execution paths."
+    }
+  }
+}

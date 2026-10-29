@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "experiments": [
+    {
+      "id": "grammar48-budget-activity-1s",
+      "path": "grammar48-budget-activity-1s",
+      "scores": "grammar48-budget-activity-1s/scores.json",
+      "provenance": "grammar48-budget-activity-1s/provenance.json",
+      "description": "Three recognition increments at fixed 1-second cadence on synthetic grammar; selection and separate confirmation, not a universal ranking."
+    }
+  ]
+}

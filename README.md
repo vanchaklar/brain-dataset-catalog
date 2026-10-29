@@ -1,6 +1,6 @@
 # Brain dataset catalog
 
-Public metadata for the Brain Android training catalog. This repository contains dataset names, descriptions, external source URLs, licensing provenance, pinned download URLs and integrity metadata only. It contains no Brain application source, corpus copies, trained graphs, credentials or user data.
+Public metadata for the Brain Android training catalog and explicitly published benchmark presets. This repository contains dataset names, descriptions, external source URLs, licensing provenance, pinned download URLs and integrity metadata, parameter configurations and aggregate benchmark findings only. It contains no Brain application source, corpus copies, trained graphs, credentials or user data.
 
 ## Catalog contract
 
@@ -18,3 +18,7 @@ Every corpus URL is pinned to a complete upstream Git commit, not a moving branc
 Dataset rights remain with their respective sources. The catalog does not relicense or redistribute dataset files and does not claim that public-domain status is identical in every jurisdiction. Review the source and license links before use or redistribution. A Project Gutenberg copy with associated notices remains subject to its stated terms. Integrity and UTF-8 decoding were checked against the exact linked files when these entries were prepared.
 
 Do not upload corpora, private project files, trained models, credentials or user data to this repository.
+
+## Scored presets
+
+See [presets](presets/grammar48-budget-activity-1s/README.md) for exact configurations, selection and separate-confirmation scores, connectivity, costs and provenance. [Machine-readable index](presets/index.json). These benchmark presets do not alter the dataset catalogs or claim a universal best setting. No corpora, trained graphs or application source are included.
