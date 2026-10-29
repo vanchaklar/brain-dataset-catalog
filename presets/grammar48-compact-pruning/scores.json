@@ -1,0 +1,93 @@
+{
+  "schema": 1,
+  "source_build": 103,
+  "experiment_date": "2026-10-29",
+  "metric_definitions": {
+    "full_dataset_class_balanced_recall": "Unweighted mean correct/occurrences per actual character over the entire evaluation; NOT the app rolling512 Confidence or mean of its readings.",
+    "run_admission_retries": "Temporary retries over training plus evaluation; no dropped inputs.",
+    "prediction_coverage": "(inputs-no_prediction)/inputs",
+    "lonely_composites": "No stored relation to another distinct composite, either direction, before UI filtering."
+  },
+  "presets": [
+    {
+      "id": "grammar48-compact-pruning",
+      "display_name": "Compact graph, continuation pruning",
+      "configuration": "configuration.json",
+      "configuration_sha256": "d78acb173afe2eaa7622e7877f4a80d40ec57094cc272c5bd9eb8fef47a305ad",
+      "input_interval_us": 1000000,
+      "graph_after_training": {
+        "composites": 946,
+        "lonely_composites": 204,
+        "connected_composites": 742,
+        "composite_to_composite_learned_edges": 5221,
+        "total_relations": 11691
+      },
+      "evaluations": [
+        {
+          "split": "selection",
+          "metrics": {
+            "accuracy": 0.6236964078794901,
+            "correct": 6459,
+            "distinct_composite_candidates": 578,
+            "inputs": 10356,
+            "letter_accuracy": 0.5617253948967194,
+            "letters": 8230,
+            "letters_correct": 4623,
+            "no_prediction": 321,
+            "positive_composite_target_boundaries": 10356,
+            "positive_forecasts_with_composite_candidate_boundaries": 8568,
+            "positive_mismatch_forecast_boundaries": 8739,
+            "ties": 0,
+            "top1_strongest_contributor_kind": {
+              "atomic": 1454,
+              "composite": 7924,
+              "mismatch": 657,
+              "other": 0
+            },
+            "wrong": 3576,
+            "wrong_space_letters_strongest_contributor_mismatch": 75,
+            "wrong_space_on_letters": 672
+          },
+          "prediction_coverage": 0.9690034762456547,
+          "full_dataset_class_balanced_recall": 0.496852048705937,
+          "frozen_graph_unchanged": true,
+          "run_admission_retries": 0,
+          "result_artifact_sha256": "c758804393c4075ddba37c1e6e227c12ddc01f17c3739b82d7b0853c017beaae",
+          "trained_checkpoint_sha256": "b69341c6ba7b7dd008417caed2ae25d7599a4698e39cbadee400f962baf70b99"
+        },
+        {
+          "split": "confirmation",
+          "metrics": {
+            "accuracy": 0.6172553561088593,
+            "correct": 6396,
+            "distinct_composite_candidates": 582,
+            "inputs": 10362,
+            "letter_accuracy": 0.5500669181165592,
+            "letters": 8219,
+            "letters_correct": 4521,
+            "no_prediction": 330,
+            "positive_composite_target_boundaries": 10362,
+            "positive_forecasts_with_composite_candidate_boundaries": 8530,
+            "positive_mismatch_forecast_boundaries": 8766,
+            "ties": 0,
+            "top1_strongest_contributor_kind": {
+              "atomic": 1477,
+              "composite": 7921,
+              "mismatch": 634,
+              "other": 0
+            },
+            "wrong": 3636,
+            "wrong_space_letters_strongest_contributor_mismatch": 67,
+            "wrong_space_on_letters": 695
+          },
+          "prediction_coverage": 0.9681528662420382,
+          "full_dataset_class_balanced_recall": 0.4724715473533896,
+          "frozen_graph_unchanged": true,
+          "run_admission_retries": 0,
+          "result_artifact_sha256": "61024c1e58274dcfccff1a8c66d1d7fcf06c05e2160a01fa5f6108dc2ddd80a6",
+          "trained_checkpoint_sha256": "b69341c6ba7b7dd008417caed2ae25d7599a4698e39cbadee400f962baf70b99"
+        }
+      ]
+    }
+  ]
+}

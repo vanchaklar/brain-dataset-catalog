@@ -7,6 +7,83 @@
       "scores": "grammar48-budget-activity-1s/scores.json",
       "provenance": "grammar48-budget-activity-1s/provenance.json",
       "description": "Three recognition increments at fixed 1-second cadence on synthetic grammar; selection and separate confirmation, not a universal ranking."
+    },
+    {
+      "id": "grammar48-bounded-weight-formula",
+      "path": "grammar48-bounded-weight-formula",
+      "scores": "grammar48-bounded-weight-formula/scores.json",
+      "provenance": "grammar48-bounded-weight-formula/provenance.json",
+      "description": "Synthetic 48-word grammar ONLY; not Schema-Guided Dialogue. Forward formula b*w/(1+abs(w)); supplied settings otherwise unchanged. Confirmation 66.71% accuracy, 98.94% coverage and 50.99% whole-evaluation macro recall versus supplied 63.01%, 97.60% and 48.04%. Costs: 5094 composites, 2464 Lonely, 34743 relations and 6071 admission retries. Accuracy/coverage option with substantially higher graph cost; not a dialogue recommendation or universal best. One-pass fresh model, reused research holdout; graph frozen but clocks continue adapting. No universal ranking."
+    },
+    {
+      "id": "grammar48-pruning-wide-recognition",
+      "path": "grammar48-pruning-wide-recognition",
+      "scores": "grammar48-pruning-wide-recognition/scores.json",
+      "provenance": "grammar48-pruning-wide-recognition/provenance.json",
+      "description": "Synthetic 48-word grammar ONLY; not Schema-Guided Dialogue. Known-continuation pruning enabled, recognition pair limit 8 and composite context cap 6; supplied confidence clocks unchanged. Confirmation 65.72% accuracy, 96.54% coverage and 52.45% whole-evaluation macro recall versus supplied 63.01%, 97.60% and 48.04%. Graph 1110 composites, 157 Lonely (14.14%), 23774 relations, 2050 retries. Higher accuracy and fewer Lonely composites, but lower coverage. Single grammar study, not a dialogue recommendation or universal best. One-pass fresh model, reused research holdout; graph frozen but clocks continue adapting. No universal ranking."
+    },
+    {
+      "id": "grammar48-fixed-clocks",
+      "path": "grammar48-fixed-clocks",
+      "scores": "grammar48-fixed-clocks/scores.json",
+      "provenance": "grammar48-fixed-clocks/provenance.json",
+      "description": "Synthetic 48-word grammar ONLY; not Schema-Guided Dialogue. Both automatic clocks disabled; activity decay 1.5 seconds, exhaustion decay 6 seconds. Confirmation 63.31% accuracy, 99.37% coverage and 49.93% whole-evaluation macro recall versus supplied 63.01%, 97.60% and 48.04%. Graph 2560 composites, 1187 Lonely, 17474 relations, 250 admission retries. Simpler grammar-tested option, not a dialogue recommendation or universal best. One-pass fresh model, reused research holdout; graph frozen but clocks continue adapting. No universal ranking."
+    },
+    {
+      "id": "grammar48-pure-confidence",
+      "path": "grammar48-pure-confidence",
+      "scores": "grammar48-pure-confidence/scores.json",
+      "provenance": "grammar48-pure-confidence/provenance.json",
+      "description": "Synthetic 48-word grammar ONLY; not Schema-Guided Dialogue. Both automatic clocks use confidence alone as their score; original tau expressions retained. Confirmation 62.71% accuracy, 98.45% coverage and 48.02% macro recall versus supplied 63.01%, 97.60% and 48.04%. Coverage gain with a small accuracy loss. 3305 composites, 1559 Lonely, 24015 relations, 2528 retries. Exhaustion still recorded zero feedback updates and five discarded comparisons; neither coverage guard fired. Experimental grammar result, not a dialogue recommendation. One-pass fresh model, reused research holdout; graph frozen but clocks continue adapting. No universal ranking."
+    },
+    {
+      "id": "grammar48-confidence-linked-exhaustion",
+      "path": "grammar48-confidence-linked-exhaustion",
+      "scores": "grammar48-confidence-linked-exhaustion/scores.json",
+      "provenance": "grammar48-confidence-linked-exhaustion/provenance.json",
+      "description": "Synthetic 48-word grammar ONLY; not Schema-Guided Dialogue. Higher confidence prolongs exhaustion through 3+6*confidence with exhaustion feedback disabled; activity confidence-penalty score unchanged. Confirmation 65.25% accuracy, 97.32% coverage and 51.49% macro recall versus supplied 63.01%, 97.60% and 48.04%. Graph 3333 composites, 1535 Lonely, 24582 relations, 2723 retries. Actual final exhaustion time 6.079 seconds because adaptation is slow. Experimental grammar result, not a dialogue recommendation. One-pass fresh model, reused research holdout; graph frozen but clocks continue adapting. No universal ranking."
+    },
+    {
+      "id": "grammar48-user-confidence",
+      "path": "grammar48-user-confidence",
+      "scores": "grammar48-user-confidence/scores.json",
+      "provenance": "grammar48-user-confidence/provenance.json",
+      "description": "Synthetic 48-word grammar ONLY; not Schema-Guided Dialogue. Reference matching the supplied confidence-score clocks. Confirmation 63.01% accuracy and 97.60% coverage; 1500 of 3215 composites Lonely. Exhaustion feedback recorded no useful updates. This is the reference, not a recommended optimum. One-pass fresh model, reused research holdout; graph frozen but clocks continue adapting. No universal ranking."
+    },
+    {
+      "id": "grammar48-accuracy-focus-3s",
+      "path": "grammar48-accuracy-focus-3s",
+      "scores": "grammar48-accuracy-focus-3s/scores.json",
+      "provenance": "grammar48-accuracy-focus-3s/provenance.json",
+      "description": "Synthetic 48-word grammar ONLY; not Schema-Guided Dialogue. Activity uses the original accuracy/mismatch/coverage score; exhaustion is fixed at 3 seconds. Confirmation 64.50% accuracy, 98.50% coverage and 48.09% macro recall. Versus the supplied reference this improves accuracy, but raises Lonely fraction to 49.04%, relations to 31916 and admission retries to 5262. Not a confidence-score winner or universal best. One-pass fresh model, reused research holdout; graph frozen but clocks continue adapting. No universal ranking."
+    },
+    {
+      "id": "grammar48-compact-pruning",
+      "path": "grammar48-compact-pruning",
+      "scores": "grammar48-compact-pruning/scores.json",
+      "provenance": "grammar48-compact-pruning/provenance.json",
+      "description": "Synthetic 48-word grammar ONLY; not Schema-Guided Dialogue. Same confidence clocks as supplied, with known-continuation pruning enabled. Confirmation 61.73% accuracy and 96.82% coverage: a 1.28 percentage-point accuracy cost versus reference. Graph shrinks to 946 composites, 204 Lonely and 11691 relations, with zero admission retries. Compact tradeoff, not an accuracy improvement. One-pass fresh model, reused research holdout; graph frozen but clocks continue adapting. No universal ranking."
+    },
+    {
+      "id": "sgd003-bounded-weight-formula",
+      "path": "sgd003-bounded-weight-formula",
+      "scores": "sgd003-bounded-weight-formula/scores.json",
+      "provenance": "sgd003-bounded-weight-formula/provenance.json",
+      "description": "Schema-Guided Dialogue shard003 ONLY;90train/19selection/19confirmation dialogues. Forward formula b*w/(1+abs(w)), supplied settings otherwise unchanged. Confirmation54.27% accuracy,99.78% coverage and28.91% average prior512 USER-only confidence versus supplied47.99%,97.98%,27.15%. USER52.81%,SYSTEM55.36%. Costs:16102 composites,8574 Lonely(53.25%),93571 relations and21318 fresh training+selection admission retries. Higher prediction metrics but substantially larger graph; not a universal best. Fresh training, graph-frozen character replay; role context known. Not grammar scores, dialogue quality or a universal ranking."
+    },
+    {
+      "id": "sgd003-supplied-confidence",
+      "path": "sgd003-supplied-confidence",
+      "scores": "sgd003-supplied-confidence/scores.json",
+      "provenance": "sgd003-supplied-confidence/provenance.json",
+      "description": "Schema-Guided Dialogue shard003 ONLY;90train/19selection/19confirmation dialogues. Reference configuration. Confirmation47.99% overall accuracy,97.98% coverage; USER49.87%,SYSTEM46.58%. Average prior512 USER-only confidence27.15%.10324 composites,5038 Lonely,69256 relations. Training+selection15110 admission retries. Fresh training, graph-frozen character replay; role context known. Not grammar scores, dialogue quality or a universal ranking."
+    },
+    {
+      "id": "sgd003-pruning-wide-recognition",
+      "path": "sgd003-pruning-wide-recognition",
+      "scores": "sgd003-pruning-wide-recognition/scores.json",
+      "provenance": "sgd003-pruning-wide-recognition/provenance.json",
+      "description": "Schema-Guided Dialogue shard003 ONLY;90train/19selection/19confirmation dialogues. Pruning enabled, recognition pairs8/context6. Confirmation49.36% accuracy versus reference47.99%, but coverage97.80% versus97.98%. USER49.05% versus49.87%; SYSTEM49.59% versus46.58%. Average prior512 USER-only confidence25.19% versus27.15%.3891 composites,807 Lonely;79486 relations versus69256, so fewer nodes does not mean fewer relations. Training+selection15207 admission retries versus15110. Tradeoff, not an across-the-board improvement. Pruning does not remove existing Lonely nodes when applied to an already-trained model. Fresh training, graph-frozen character replay; role context known. Not grammar scores, dialogue quality or a universal ranking."
     }
   ]
 }

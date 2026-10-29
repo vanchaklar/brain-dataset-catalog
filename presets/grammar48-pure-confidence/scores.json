@@ -1,0 +1,93 @@
+{
+  "schema": 1,
+  "source_build": 103,
+  "experiment_date": "2026-10-29",
+  "metric_definitions": {
+    "full_dataset_class_balanced_recall": "Unweighted mean correct/occurrences per actual character over the entire evaluation; NOT the app rolling512 Confidence or mean of its readings.",
+    "run_admission_retries": "Temporary retries over training plus evaluation; no dropped inputs.",
+    "prediction_coverage": "(inputs-no_prediction)/inputs",
+    "lonely_composites": "No stored relation to another distinct composite, either direction, before UI filtering."
+  },
+  "presets": [
+    {
+      "id": "grammar48-pure-confidence",
+      "display_name": "Pure confidence scores",
+      "configuration": "configuration.json",
+      "configuration_sha256": "f83de9450eaf7a9a59f15bf60c19a9a425db2796d8f82c9d5c4f01c29f490aa6",
+      "input_interval_us": 1000000,
+      "graph_after_training": {
+        "composites": 3305,
+        "lonely_composites": 1559,
+        "connected_composites": 1746,
+        "composite_to_composite_learned_edges": 10612,
+        "total_relations": 24015
+      },
+      "evaluations": [
+        {
+          "split": "selection",
+          "metrics": {
+            "accuracy": 0.6233101583623021,
+            "correct": 6455,
+            "distinct_composite_candidates": 1045,
+            "inputs": 10356,
+            "letter_accuracy": 0.5660996354799513,
+            "letters": 8230,
+            "letters_correct": 4659,
+            "no_prediction": 160,
+            "positive_composite_target_boundaries": 10356,
+            "positive_forecasts_with_composite_candidate_boundaries": 8030,
+            "positive_mismatch_forecast_boundaries": 8909,
+            "ties": 0,
+            "top1_strongest_contributor_kind": {
+              "atomic": 2379,
+              "composite": 6248,
+              "mismatch": 1569,
+              "other": 0
+            },
+            "wrong": 3741,
+            "wrong_space_letters_strongest_contributor_mismatch": 96,
+            "wrong_space_on_letters": 626
+          },
+          "prediction_coverage": 0.9845500193124759,
+          "full_dataset_class_balanced_recall": 0.4894257911430572,
+          "frozen_graph_unchanged": true,
+          "run_admission_retries": 2528,
+          "result_artifact_sha256": "0872e20c87c447b8502e7ed89a35953488ae4b2e6880d7fdaba9a23314cc6f08",
+          "trained_checkpoint_sha256": "efa27e0675c444d907ee8bf51e61084b71838fd221bc0163887c76c7a7ab0411"
+        },
+        {
+          "split": "confirmation",
+          "metrics": {
+            "accuracy": 0.6270990156340475,
+            "correct": 6498,
+            "distinct_composite_candidates": 1032,
+            "inputs": 10362,
+            "letter_accuracy": 0.5668572819077746,
+            "letters": 8219,
+            "letters_correct": 4659,
+            "no_prediction": 161,
+            "positive_composite_target_boundaries": 10362,
+            "positive_forecasts_with_composite_candidate_boundaries": 7921,
+            "positive_mismatch_forecast_boundaries": 8909,
+            "ties": 0,
+            "top1_strongest_contributor_kind": {
+              "atomic": 2450,
+              "composite": 6181,
+              "mismatch": 1570,
+              "other": 0
+            },
+            "wrong": 3703,
+            "wrong_space_letters_strongest_contributor_mismatch": 107,
+            "wrong_space_on_letters": 619
+          },
+          "prediction_coverage": 0.9844624589847519,
+          "full_dataset_class_balanced_recall": 0.4801780650310151,
+          "frozen_graph_unchanged": true,
+          "run_admission_retries": 2528,
+          "result_artifact_sha256": "d4db77a102e8c448dadc4ee4023bc1bd50b274d3b08a04d74e3b66c3accddb96",
+          "trained_checkpoint_sha256": "efa27e0675c444d907ee8bf51e61084b71838fd221bc0163887c76c7a7ab0411"
+        }
+      ]
+    }
+  ]
+}

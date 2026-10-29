@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "source_commit": "570cdbf64bfac6a7a231ec6fbefb9969fcabbdaa",
+  "source_commit_status": "Local source identity; publication not implied. Native headers identical to earlier code101 grammar benchmark.",
+  "runner_sha256": "212f1b9183a755fd85c04504bbb4ca8251f3de91cd8838d1b9cc1f44e20bea79",
+  "binary_sha256": "1b347b9762473bbc370e3bbfd11006b6e2a72ea786988f8dc184693a32ce9228",
+  "dataset": "Synthetic 48-word grammar, not Schema-Guided Dialogue",
+  "training": {
+    "characters": 34392,
+    "sentences": 448,
+    "sha256": "26c2f7727b5b5bce05919fbf734575f25dee011b289728102bdf4f9bbe099480"
+  },
+  "selection": {
+    "characters": 10356,
+    "sentences": 134,
+    "sha256": "b0f34daf8280a6a15347d1c0d0a3512ac6af818567bc47d7167ebf7ea239352f"
+  },
+  "confirmation": {
+    "characters": 10362,
+    "sentences": 135,
+    "sha256": "1bffda49ae91a77d2c1d10690cccb3ff7fdf92fc7f1e696bb7a5fcbff0dda284",
+    "zero_sentence_overlap_with_training_and_selection": true,
+    "scope": "Reused research holdout, not globally untouched; candidate selection used separate selection data."
+  },
+  "protocol": "Fresh model, one training pass, 1 second model time/input; frozen graph evaluation without reset, adaptive clocks continue from past outcomes. Android wall timing/learning_rate not benchmarked. Retired prediction_threshold is inert. Hashes identify local evidence; corpus and runner are not included in this metadata-only publication.",
+  "candidate_selection": "Exploratory comparisons selected candidates on separate selection data, followed by reused confirmation data. Supplied configuration is reference. Pruning-wide was locked after two combination selection runs. Fixed clocks isolate controller behavior. No statistical uncertainty estimate or cross-dataset generalization."
+}

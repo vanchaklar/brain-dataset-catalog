@@ -1,0 +1,145 @@
+{
+  "schema": 1,
+  "source_build": 103,
+  "experiment_date": "2026-10-29",
+  "metric_definitions": {
+    "accuracy": "Correct next Unicode scalar / all input scalars including abstentions/ties as incorrect. Both roles.",
+    "letter_accuracy": "Correct next ASCII letter / all actual ASCII letter inputs.",
+    "class_balanced_recall": "Whole-evaluation macro recall per actual character, calculated separately by role. Not rolling Confidence.",
+    "rolling_confidence": "Actual previous512 USER/token outcomes, seeded by trained history; excludes SYSTEM/observed-output. Mean before all role inputs reported.",
+    "run_admission_retries": "Selection includes training; confirmation resumes trained checkpoint and counts evaluation-only retries. See retry_scope.",
+    "lonely_composites": "No stored relation to another distinct composite, either direction, before UI filtering."
+  },
+  "presets": [
+    {
+      "id": "sgd003-bounded-weight-formula",
+      "display_name": "SGD003 bounded-weight forward formula",
+      "configuration": "configuration.json",
+      "configuration_sha256": "a27e8845f56440186301a998c2a82db2491288fd20a1f09990057cb1179b77d7",
+      "input_interval_us": 1000000,
+      "graph_after_training": {
+        "composites": 16102,
+        "lonely_composites": 8574,
+        "connected_composites": 7528,
+        "composite_to_composite_learned_edges": 34692,
+        "total_relations": 93571
+      },
+      "evaluations": [
+        {
+          "split": "selection",
+          "metrics": {
+            "accuracy": 0.5696778171728072,
+            "correct": 7391,
+            "distinct_composite_candidates": 3775,
+            "inputs": 12974,
+            "letter_accuracy": 0.5312065195786126,
+            "letters": 10062,
+            "letters_correct": 5345,
+            "no_prediction": 44,
+            "positive_composite_target_boundaries": 12955,
+            "positive_forecasts_with_composite_candidate_boundaries": 10205,
+            "positive_mismatch_forecast_boundaries": 12872,
+            "ties": 0,
+            "top1_strongest_contributor_kind": {
+              "atomic": 2434,
+              "composite": 9251,
+              "mismatch": 1245,
+              "other": 0
+            },
+            "wrong": 5539,
+            "wrong_space_letters_strongest_contributor_mismatch": 432,
+            "wrong_space_on_letters": 1223
+          },
+          "prediction_coverage": 0.9966086018190227,
+          "roles": {
+            "token": {
+              "inputs": 5092,
+              "correct": 2746,
+              "accuracy": 0.5392772977219167,
+              "unique_prediction_coverage": 0.992930086410055,
+              "class_balanced_recall": 0.21444293288470093,
+              "types": 67
+            },
+            "observed-output": {
+              "inputs": 7882,
+              "correct": 4645,
+              "accuracy": 0.5893174321238265,
+              "unique_prediction_coverage": 0.9989850291804111,
+              "class_balanced_recall": 0.24645266323838408,
+              "types": 66
+            }
+          },
+          "rolling_confidence": {
+            "mean_before_all_role_inputs": 0.2873881605585865,
+            "mean_before_user_inputs": 0.28651670218729186,
+            "final": 0.38923422292452375,
+            "window": 512,
+            "counts": "USER/token only, seeded with trained checkpoint history"
+          },
+          "frozen_graph_unchanged": true,
+          "run_admission_retries": 21318,
+          "retry_scope": "training plus selection",
+          "result_artifact_sha256": "f8403d3b0199f80a410082b83bb69e1eea33c340b7cfc677be1737d7a9d1aa4c",
+          "trained_checkpoint_sha256": "8a84b2027068dff289d17137de76625b01c63c65ed84403ef2585b004542afba"
+        },
+        {
+          "split": "confirmation",
+          "metrics": {
+            "accuracy": 0.5426746105807193,
+            "correct": 7560,
+            "distinct_composite_candidates": 3883,
+            "inputs": 13931,
+            "letter_accuracy": 0.49855800539585077,
+            "letters": 10749,
+            "letters_correct": 5359,
+            "no_prediction": 30,
+            "positive_composite_target_boundaries": 13911,
+            "positive_forecasts_with_composite_candidate_boundaries": 10467,
+            "positive_mismatch_forecast_boundaries": 13804,
+            "ties": 0,
+            "top1_strongest_contributor_kind": {
+              "atomic": 3100,
+              "composite": 9329,
+              "mismatch": 1472,
+              "other": 0
+            },
+            "wrong": 6341,
+            "wrong_space_letters_strongest_contributor_mismatch": 480,
+            "wrong_space_on_letters": 1460
+          },
+          "prediction_coverage": 0.9978465293230924,
+          "roles": {
+            "token": {
+              "inputs": 5969,
+              "correct": 3152,
+              "accuracy": 0.5280616518679846,
+              "unique_prediction_coverage": 0.9956441615010889,
+              "class_balanced_recall": 0.20875858213958084,
+              "types": 64
+            },
+            "observed-output": {
+              "inputs": 7962,
+              "correct": 4408,
+              "accuracy": 0.5536297412710375,
+              "unique_prediction_coverage": 0.9994976136649083,
+              "class_balanced_recall": 0.23296142354062868,
+              "types": 68
+            }
+          },
+          "rolling_confidence": {
+            "mean_before_all_role_inputs": 0.2891428404590076,
+            "mean_before_user_inputs": 0.29011485705871454,
+            "final": 0.3311307270312207,
+            "window": 512,
+            "counts": "USER/token only, seeded with trained checkpoint history"
+          },
+          "frozen_graph_unchanged": true,
+          "run_admission_retries": 0,
+          "retry_scope": "confirmation evaluation only, restored trained model with preallocated reverse arena; not a fresh training cost",
+          "result_artifact_sha256": "5f8b9bbe65ebd8e741773575a4510e5e8de02a94427f7dc0428418ffa5c2d395",
+          "trained_checkpoint_sha256": "8a84b2027068dff289d17137de76625b01c63c65ed84403ef2585b004542afba"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "model": {
+    "schema": 4,
+    "parameters": {
+      "activity_cap": 20.0,
+      "composite_context_cap": 3,
+      "composite_recognition_increment": 4,
+      "effective_context_cap": 16,
+      "exhaust_atomic_concepts": false,
+      "exhaustion_cap": 19.0,
+      "exhaustion_increment": 0.1,
+      "forward_eligibility_cutoff": 0.5,
+      "initial_mismatch_inhibition": 1.0,
+      "learning_fan_out": 50,
+      "prediction_exhaustion_increment": 0.1,
+      "propagation_fan_out": 10,
+      "recognition_exhaustion_increment": 0.1,
+      "recognition_pair_limit": 4,
+      "relation_fan_in": 10,
+      "storage_fan_out": 2000,
+      "prediction_threshold": 0.8
+    },
+    "decay": {
+      "activity_tau_seconds": 3.0,
+      "desire_tau_seconds": 3.0,
+      "exhaustion_tau_seconds": 6.0,
+      "expectation_tau_seconds": 3.0,
+      "relation_tau_seconds": 315360000.0
+    },
+    "spikes": {
+      "mode": 0,
+      "delay_us": 0,
+      "strength": 2
+    },
+    "reverse": {
+      "enabled": true,
+      "nodes_per_tick": 64
+    },
+    "auto_activity_clock": {
+      "schema": 1,
+      "enabled": true,
+      "feedback": true,
+      "expression": "ratio*interval",
+      "score_expression": "confidence-0.05*mismatch_error-0.5*max(0,0.95-coverage)"
+    },
+    "auto_exhaustion_clock": {
+      "schema": 1,
+      "enabled": true,
+      "feedback": true,
+      "expression": "ratio*0.1*interval",
+      "score_expression": "confidence-0.05*mismatch_error-0.5*max(0,0.95-coverage)"
+    },
+    "known_continuation_pruning": {
+      "schema": 1,
+      "enabled": true
+    }
+  },
+  "formula": {
+    "schema": 1,
+    "hook": "forward_contribution",
+    "mode": "custom",
+    "expression": "b*w",
+    "relation_expression": "source_activity*target_activity"
+  },
+  "training": {
+    "batch_size": 1,
+    "learning_rate": 100000,
+    "text_tokenizer_enabled": false,
+    "token_mode": "token_text",
+    "single_input_dispatch": true
+  }
+}
